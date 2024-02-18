@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptual section practices</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <!--daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!--header section-->
+
+    <header>
+      <div class="navbar bg-gray-400">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+
+        <div class="flex-none">
+          <!--item for 0 -->
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+
+                <span id="purchesCount"  class="pl-2 indicator-item  text-2xl text-red-400">0</span>
+              </div>
+            </div>
+
+            <div
+              tabindex="0"
+              class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+            >
+              <div class="card-body">
+
+                <span class="font-bold text-lg">0 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="font-medium">Home</h2>
+
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--main section-->
+
+    <main>
+      <section class="bg-violet-500 p-10 space-y-5">
+        <div>
+          <h1 id="h1" class="text-orange-400 text-4xl">atiqur rahman</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+            accusantium?
+          </p>
+        </div>
+
+        <div>
+          <button onclick="handleClick(event)" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </section>
+
+      <!--lets travel section-->
+
+      <section>
+        <div class="hero min-h-screen bg-base-200">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <img
+              src="./image/travel.jpg"
+              class="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div>
+              <h1 class="text-5xl font-bold">lets Travel</h1>
+              <p class="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. <br />
+                In deleniti eaque aut repudiandae et a id nisi.
+              </p>
+
+              <h1  class="text-4xl font-bold">
+                Total Budget : <span id="Budget">900</span> $
+              </h1>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--tour  image section-->
+      <section class="mt-10">
+
+        <!--main container-->
+        <div class="grid grid-cols-2 gap-x-10">
+
+
+          <!--image section left-->
+
+          <div class="grid grid-cols-2 gap-3">
+
+            <div class="flex gap-4 bg-orange-200 shadow-xl p-2">
+              <div>
+                <img class="w-44" src="./image/sajec vally.jpg" alt="" />
+              </div>
+
+              <div class="space-y-3">
+                <h1 id="Shajek">Shajek</h1>
+                <h3>Cost : <span>300</span>$</h3>
+
+                <button class="card button btn bg-green-400">Add to cart</button>
+              </div>
+            </div>
+
+
+            <div class="flex gap-4 bg-orange-200 shadow-xl p-2">
+              <div>
+                <img class="w-44" src="./image/cox_bazer.jpg" alt="" />
+              </div>
+
+              <div class="space-y-4">
+                <h1>cox's buzzer</h1>
+                <h3>Cost : <span>300</span>$</h3>
+
+                <button  class="button btn bg-green-400">Add to cart</button>
+              </div>
+            </div>
+
+
+            <div class="flex gap-4 bg-orange-200 shadow-xl p-2">
+              <div>
+                <img class="w-44" src="./image/dhaka.jpg" alt="" />
+              </div>
+
+              <div class="space-y-4">
+                <h1>Dhaka</h1>
+                <h3>Cost : <span>300</span>$</h3>
+                <button class="button btn bg-green-400">Add to cart</button>
+              </div>
+            </div>
+
+            <div class="flex gap-4 bg-orange-200 shadow-xl p-2">
+              <div>
+                <img class="w-44" src="./image/rajshahi.jpg" alt="" />
+              </div>
+
+              <div class="space-y-4">
+                <h1>Rajshahi</h1>
+                <h3>Cost : <span>500</span>$</h3>
+                <button class="button btn bg-green-400">Add to cart</button>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!--right div -->
+          <div class="right">
+            <div class="space-y-5">
+              <div class="">
+                <h1
+                  class="border-b-8 border-indigo-500/100 text-4xl font-semibold p-4"
+                >
+                  Cart
+                </h1>
+
+                <!-- <h1 id="venu"></h1>
+                <h2 id="price"></h2> -->
+
+                <ul id="priceVeno" class="">
+
+                </ul>
+
+                <h2 class="text-3xl font-medium">
+                  Total Cost : <span id="totalCost">0</span>$
+                </h2>
+              </div>
+
+              <div class="border-b-8 border-blue-500 py-4">
+
+                <button onclick="GrandTotal('bus')" class="offer btn bg-slate-500">Bus + 100</button>
+
+                <button onclick="GrandTotal('train')" class="offer btn bg-slate-500">Train - 200</button>
+
+                <button onclick="GrandTotal('fight')" class="offer btn bg-slate-500">Fight + 500</button>
+              </div>
+
+              <hr />
+
+              <h2 class="text-3xl font-medium border-b-8 border-indigo-500/100">
+                Grand Total : <span id="GrandTotal">0</span> $
+              </h2>
+            </div>
+          </div>
+
+        </div>
+
+
+      </section>
+    </main>
+
+
+
+<!--JAVA   Script file-->
+    <script src="/java_Script/test.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
